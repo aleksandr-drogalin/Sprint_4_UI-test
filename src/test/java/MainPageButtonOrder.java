@@ -46,9 +46,9 @@ public class MainPageButtonOrder {
         MainPage mainPage = new MainPage(driver);
         PageForWhomScooter pageForWhomScooter = new PageForWhomScooter(driver);
         mainPage.closeCookie();
-        if (selectButton == "Проверить верхнюю кнопку") {
+        if (selectButton.equals("Проверить верхнюю кнопку")) {
             mainPage.clickButtonOrderInTheHeader();
-        } else if (selectButton == "Проверить нижнюю кнопку") {
+        } else if (selectButton.equals("Проверить нижнюю кнопку")) {
             mainPage.clickButtonOrderAtTheBottom();
         } else {
             throw new RuntimeException("Введите: Проверить верхнюю(или нижнюю) кнопку");
