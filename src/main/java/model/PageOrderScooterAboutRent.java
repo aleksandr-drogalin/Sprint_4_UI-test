@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.concurrent.TimeUnit;
 
-public class PageAboutRent {
+public class PageOrderScooterAboutRent {
 
     private WebDriver driver;
 
@@ -28,7 +28,7 @@ public class PageAboutRent {
     private By messageOrderOk = By.xpath(".//div[@class='Order_ModalHeader__3FDaJ']");
 
     //конструктор класса
-    public PageAboutRent(WebDriver driver) {
+    public PageOrderScooterAboutRent(WebDriver driver) {
         this.driver = driver;
     }
 

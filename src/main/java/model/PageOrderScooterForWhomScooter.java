@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class PageForWhomScooter {
+public class PageOrderScooterForWhomScooter {
 
     private WebDriver driver;
 
@@ -27,7 +27,7 @@ public class PageForWhomScooter {
     private By closeCookie = By.xpath(".//button[text()='да все привыкли']");
 
     //конструктор класса
-    public PageForWhomScooter(WebDriver driver) {
+    public PageOrderScooterForWhomScooter(WebDriver driver) {
         this.driver = driver;
     }
 
