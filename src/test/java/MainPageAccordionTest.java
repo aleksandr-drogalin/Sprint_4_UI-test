@@ -10,7 +10,7 @@ import org.openqa.selenium.WebDriver;
 import static org.junit.Assert.assertTrue;
 
 @RunWith(Parameterized.class)
-public class MainPageAccordion {
+public class MainPageAccordionTest {
     private static final String MAIN_PAGE_URL = "https://qa-scooter.praktikum-services.ru/"; //главная страница
     private static final String BROWSER_NAME = "Chrome"; //задаем браузер в котором будем работать
 
@@ -27,7 +27,7 @@ public class MainPageAccordion {
     private final String answer;
 
     //конструктор класса
-    public MainPageAccordion (String question, String answer) {
+    public MainPageAccordionTest(String question, String answer) {
         this.question = question;
         this.answer = answer;
     }

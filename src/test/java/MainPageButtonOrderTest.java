@@ -1,5 +1,5 @@
 import model.MainPage;
-import model.PageForWhomScooter;
+import model.PageOrderScooterForWhomScooter;
 import model.SelectBrowser;
 import org.junit.After;
 import org.junit.Before;
@@ -11,7 +11,7 @@ import org.openqa.selenium.WebDriver;
 import static org.junit.Assert.assertTrue;
 
 @RunWith(Parameterized.class)
-public class MainPageButtonOrder {
+public class MainPageButtonOrderTest {
     private static final String MAIN_PAGE_URL = "https://qa-scooter.praktikum-services.ru/"; //главная станица
     private static final String BROWSER_NAME = "Chrome"; //задаем браузер Chrome или Firefox
 
@@ -27,7 +27,7 @@ public class MainPageButtonOrder {
     private final String selectButton;
 
     //конструктор класса
-    public MainPageButtonOrder(String selectButton){
+    public MainPageButtonOrderTest(String selectButton){
         this.selectButton = selectButton;
     }
 
@@ -44,7 +44,7 @@ public class MainPageButtonOrder {
     public void testButtonOrder() {
         driver.get(MAIN_PAGE_URL);
         MainPage mainPage = new MainPage(driver);
-        PageForWhomScooter pageForWhomScooter = new PageForWhomScooter(driver);
+        PageOrderScooterForWhomScooter pageOrderScooterForWhomScooter = new PageOrderScooterForWhomScooter(driver);
         mainPage.closeCookie();
         if (selectButton.equals("Проверить верхнюю кнопку")) {
             mainPage.clickButtonOrderInTheHeader();
@@ -53,7 +53,7 @@ public class MainPageButtonOrder {
         } else {
             throw new RuntimeException("Введите: Проверить верхнюю(или нижнюю) кнопку");
         };
-        assertTrue(pageForWhomScooter.pageIsDisplayed()); //проверили, что перешли в окно оформления заказа
+        assertTrue(pageOrderScooterForWhomScooter.pageIsDisplayed()); //проверили, что перешли в окно оформления заказа
         driver.quit();
     }
 
