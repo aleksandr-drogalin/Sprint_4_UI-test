@@ -1,6 +1,5 @@
 import model.MainPage;
 import model.PageOrderScooterForWhomScooter;
-import model.SelectBrowser;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
